@@ -1,0 +1,134 @@
+.brandnewNewReleaseSection1 {
+  /* background: linear-gradient(45deg, rgb(70, 11, 35), #180040); */
+  height: 100vh;
+  width: 100vw;
+  padding: 5em 3em 3em 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.brandnewNewReleaseSection1_title {
+  font-size: 3em;
+  padding-bottom: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+.brandnewNewReleaseSection1_subarea {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80%;
+}
+.brandnewNewReleaseSection1_cardsContainer {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+  /* border-right: 1px solid white; */
+  position: relative;
+  z-index: 2;
+  overflow-y: auto;
+}
+.brandnewNewReleaseSection1_cards {
+  height: 250px;
+  width: 250px;
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.683);
+  background-image: url("./songs/Baar-Baar-Dekho-Hindi-2016-20181205114400-500x500.jpg");
+  background-size: cover;
+}
+.brandnewNewReleaseSection1_cards_overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    black,
+    rgba(0, 0, 0, 0.676),
+    rgba(0, 0, 0, 0.42)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.brandnewNewReleaseSection1_cards_title {
+  font-size: 2em;
+  padding: 1em;
+  opacity: 1;
+  transition: all 0.2s linear;
+}
+.brandnewNewReleaseSection1_cards_controls {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.2s linear;
+  z-index: 3;
+}
+.brandnewNewReleaseSection1_cards_controlsLike {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+}
+.brandnewNewReleaseSection1_cards_overlay:hover
+  .brandnewNewReleaseSection1_cards_title {
+  opacity: 0;
+}
+.brandnewNewReleaseSection1_cards_overlay:hover
+  .brandnewNewReleaseSection1_cards_controls {
+  opacity: 1;
+}
+.brandnewNewReleaseSection1_discContainer {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  width: 0;
+}
+.brandnewNewReleaseSection1_discContainer_discImg {
+  max-height: 90%;
+  object-fit: contain;
+  position: relative;
+  left: -300%;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+}
+@keyframes brandnewNewReleaseSection1_discContainer_discImgAnimeIn {
+  0% {
+    left: -300%;
+  }
+  100% {
+    left: 0%;
+  }
+}
+
+@keyframes brandnewNewReleaseSection1_discContainer_discImgAnimeOut {
+  0% {
+    left: 0%;
+  }
+  100% {
+    left: -300%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .brandnewNewReleaseSection1 {
+    height: auto;
+    align-items: center;
+  }
+  .brandnewNewReleaseSection1_cardsContainer {
+    justify-content: center;
+  }
+  .brandnewNewReleaseSection1_cards {
+    width: 120px;
+    height: 120px;
+  }
+  .brandnewNewReleaseSection1_cards_title {
+    font-size: 1em;
+  }
+}
